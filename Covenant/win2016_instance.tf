@@ -52,9 +52,9 @@ resource "aws_instance" "Windows_2016" {
   }
   instance_type = var.aws_instance_type
   ami = data.aws_ami.Windows_2016.image_id
-  availability_zone = [lookup(var.aws_availability_zone, var.aws_region)]
+  availability_zone = lookup(var.aws_availability_zone, var.aws_region)
   security_groups = [lookup(var.aws_security_group, var.aws_region)]
-  key_name = [lookup(var.key_name, var.aws_region)]
+  key_name = lookup(var.aws_key_name, var.aws_region)
   tags = {
     Name = "Covenant"
   }
