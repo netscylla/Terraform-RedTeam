@@ -10,6 +10,13 @@ variable "aws_region" {
   default = "xxx enter your region xxx"
 }
 
+variable "aws_availability_zone" {
+  description = "AWS AZ to launch servers."
+  default = {
+    "eu-west-2"="xxx enter your AZ xxx"
+  }
+}
+
 variable "key_name" {
   description = "Name of the SSH keypair to use in AWS."
   default = {
