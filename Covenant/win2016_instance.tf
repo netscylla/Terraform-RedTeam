@@ -21,7 +21,9 @@ data "template_file" "init" {
   choco install git
   choco install dotnetcore --version=2.2.2 
   choco install dotnetcore-sdk --version=2.2.207
-  git clone --recurse-submodules https://github.com/cobbr/Covenant C:\Covenant\
+  cmd.exe /c git clone --recurse-submodules https://github.com/cobbr/Covenant C:\Covenant\
+  dotnet build C:\Covenant\Covenant
+  dotnet run --project C:\Covenant\Covenant
 </powershell>
 EOF
 }
