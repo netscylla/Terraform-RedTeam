@@ -5,6 +5,7 @@ Terraform scripts for building red-team infrastructure on AWS
 Build script for Covenant on EC2 utiltising Windows Server 2016, you'll want to modify windows2016_variables.tf and enter in your specific AWS requirements.
 ```
 cd Covenant
+terraform init
 terraform plan
 terraform apply
 ```
