@@ -6,8 +6,8 @@ Build script for Covenant on EC2 utiltising Windows Server 2016, you'll want to 
 ```
 cd Covenant
 terraform init
-terraform plan
-terraform apply
+terraform plan -o covenant
+terraform apply covenant
 ```
 👷‍♀️ 👷‍♂️🤞
 
@@ -27,3 +27,12 @@ dotnet build
 dotnet run
 ```
 Covenant should then be accessible on the output-ip on port 7443 👍
+
+## Kali 
+Build script for Kali Linux, you'll want to modify kali_variables.tf and enter in your specific AWS requirements.
+```
+cd Kali
+terraform init
+terraform plan -o kali
+terraform apply kali
+```
